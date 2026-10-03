@@ -1,0 +1,74 @@
+:root { font-family: Arial, sans-serif; color: #24352e; background: #f3f5f4; font-synthesis: none; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select { font: inherit; }
+button, select { cursor: pointer; }
+button { color: inherit; }
+button:focus-visible, input:focus-visible, select:focus-visible, a:focus-visible { outline: 3px solid #93c8b0; outline-offset: 3px; }
+button { border: 1px solid #d8e0dc; background: white; border-radius: 6px; padding: .55rem .8rem; }
+button:hover { background: #f0f5f2; }
+input, select { width: 100%; min-width: 0; padding: .65rem .75rem; border: 1px solid #cbd5cf; border-radius: 6px; color: #24352e; background: white; }
+input::placeholder { color: #7c8781; }
+.app { max-width: 1120px; margin: auto; padding: 0 28px; }
+.header { display: flex; justify-content: space-between; align-items: center; min-height: 92px; border-bottom: 1px solid #dce3df; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.3rem; text-decoration: none; color: #24352e; }
+.header > span { font-size: .9rem; color: #66736c; }
+.heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin: 30px 0 24px; }
+h1 { margin: 0 0 6px; font-size: 1.9rem; line-height: 1.2; }
+.heading p { margin: 0; color: #66736c; }
+.month-label { font-size: .9rem; display: grid; gap: 4px; width: 205px; flex-shrink: 0; }
+.demo-note { display: flex; align-items: center; justify-content: space-between; gap: 20px; background: #e6f0ea; padding: 12px 16px; margin-bottom: 20px; border-radius: 6px; font-size: .875rem; }
+.demo-note p { margin: 0; }
+.demo-note button { flex-shrink: 0; background: transparent; border-color: #bfd1c5; font-size: .875rem; }
+.summary { display: grid; grid-template-columns: 1.3fr .7fr 1fr; gap: 16px; margin-bottom: 24px; }
+.summary > div { display: flex; flex-direction: column; padding: 20px; border: 1px solid #dce3df; border-radius: 8px; background: white; min-width: 0; }
+.summary > .summary-total { background: #16704d; color: white; border-color: #16704d; }
+.summary span { font-size: .9rem; }
+.summary strong { font-size: 1.85rem; line-height: 1.3; margin: 8px 0; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.summary small { color: #69766f; font-size: .8rem; overflow-wrap: anywhere; }
+.summary-total small { color: #d2e8dc; }
+.workspace { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+.records { display: grid; gap: 20px; }
+.form-panel, .list-panel, .categories-panel { background: white; border: 1px solid #dce3df; border-radius: 8px; padding: 22px; min-width: 0; }
+h2 { margin: 0; font-size: 1.125rem; }
+.muted { color: #69766f; font-size: .875rem; }
+.form-panel > p, .categories-panel > p { margin: 5px 0 18px; }
+.form-panel form { display: grid; gap: 7px; }
+.form-panel label { font-size: .875rem; margin-top: 8px; }
+.form-panel .primary { margin-top: 14px; background: #16704d; color: white; border-color: #16704d; min-height: 44px; font-weight: 700; }
+.primary:hover { background: #105d3f; }
+.form-panel .local-note { font-size: .8rem; color: #69766f; margin: 18px 0 0; }
+.section-heading { display: flex; gap: 12px; justify-content: space-between; align-items: center; }
+.filter-label { display: flex; align-items: center; gap: 12px; font-size: .875rem; margin-top: 18px; }
+.filter-label select { width: auto; max-width: 100%; font-size: .875rem; }
+.expense-list, .category-totals { list-style: none; margin: 16px 0 0; padding: 0; }
+.expense-list li { display: flex; align-items: center; gap: 12px; padding: 15px 0; border-top: 1px solid #edf0ee; }
+.category-mark { display: grid; place-items: center; background: #f1f4f2; width: 36px; height: 36px; flex-shrink: 0; border-radius: 7px; font-weight: 700; }
+.expense-details { display: grid; flex: 1; min-width: 0; gap: 2px; }
+.expense-details strong { font-size: .95rem; font-weight: 500; overflow-wrap: anywhere; }
+.expense-details span { color: #69766f; font-size: .8rem; }
+.expense-amount { font-size: .95rem; font-weight: 700; font-variant-numeric: tabular-nums; text-align: right; }
+.delete { border: 0; font-size: 1.4rem; line-height: 1; padding: 7px; color: #7c8781; }
+.delete:hover { color: #a13434; background: #fcf1f1; }
+.empty { text-align: center; padding: 32px 12px; }
+.empty h3 { font-size: 1rem; margin: 0 0 6px; }
+.empty p, .no-chart { color: #69766f; font-size: .875rem; }
+.category-totals { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.category-totals li { min-width: 0; }
+.category-totals li > div { display: flex; justify-content: space-between; gap: 12px; font-size: .875rem; margin-bottom: 6px; }
+.category-totals strong { font-weight: 500; }
+progress { display: block; width: 100%; height: 7px; border: none; border-radius: 4px; overflow: hidden; }
+progress::-webkit-progress-bar { background: #edf0ee; }
+progress::-webkit-progress-value { background: currentColor; }
+.notice { min-height: 56px; margin-top: 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: .875rem; }
+.notice button { font-size: .875rem; padding: .35rem .6rem; }
+.error { color: #a12a2a; font-size: .875rem; }
+footer { padding: 24px 0; border-top: 1px solid #dce3df; color: #69766f; font-size: .8rem; margin-top: 12px; }
+@media (max-width: 800px) { .workspace { grid-template-columns: minmax(0, 1fr) 270px; gap: 16px; } .app { padding: 0 18px; } .form-panel, .list-panel, .categories-panel { padding: 16px; } .category-totals { grid-template-columns: 1fr; } }
+@media (max-width: 640px) {
+  .header { min-height: 74px; } .heading { align-items: start; flex-direction: column; gap: 16px; margin-top: 24px; } h1 { font-size: 1.65rem; }
+  .month-label { width: 100%; } .demo-note { flex-direction: column; align-items: start; gap: 10px; }
+  .summary { grid-template-columns: 1fr 1fr; gap: 10px; } .summary-total { grid-column: 1 / -1; } .summary > div { padding: 16px; } .summary strong { font-size: 1.4rem; }
+  .workspace { grid-template-columns: 1fr; } .form-panel { grid-row: 1; } .expense-list li { flex-wrap: wrap; gap: 8px; } .expense-details { flex-basis: calc(100% - 50px); }
+  .expense-amount { margin-left: 44px; flex: 1; text-align: left; } .delete { margin-left: auto; min-width: 36px; min-height: 36px; }
+}
